@@ -4,6 +4,8 @@ import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/github-mark.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
+import Login from '../Login'
+import { Link } from "react-router-dom";
 
 export const NavBar = () =>{
   const [activeLink, setActiveLink] = useState('home');
@@ -23,6 +25,7 @@ export const NavBar = () =>{
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   }
+  
     return (
         <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
           <Container>
@@ -49,11 +52,10 @@ export const NavBar = () =>{
                     <img src={navIcon3} alt="" />
                     </a>
                 </div>
-                <button className="vvd"><span>Let’s Connect</span></button>
+                <Link className="app-header-item" to="LoginForm"><button className="vvd" ><span>เข้าสู่ระบบ</span></button></Link>
               </span>
             </Navbar.Collapse>
           </Container>
         </Navbar>
       );
     }
-    

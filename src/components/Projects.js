@@ -1,8 +1,9 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg1 from "../assets/img/hardware.jpg";
+import projImg2 from "../assets/img/dashboard.jpg";
+import projImg3 from "../assets/img/datalog.jpg";
+import projImg4 from "../assets/img/timelog.jpg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -10,20 +11,25 @@ import TrackVisibility from 'react-on-screen';
 export const Projects = () => {
     const projects =[
             {
-              title: "Business Startup",
-              description: "Design & Development",
-              imgUrl: projImg1,
-            },
-            {
-              title: "Business Startup",
-              description: "Design & Development",
+              title: "หน้าตา dashboard",
+              description: "สามารถดูค่าpmนะเวลานี้",
               imgUrl: projImg2,
             },
             {
-              title: "Business Startup",
-              description: "Design & Development",
+              title: "หน้าตา datalog",
+              description: "สามารถดูค่าpmของแต่ละวัน",
               imgUrl: projImg3,
-            }
+            },
+            {
+              title: "หน้าตา timelog",
+              description: "สามารถดูค่าpmของแต่ละ ชม.",
+              imgUrl: projImg4,
+            },
+            {
+                title: "ตัวhardware",
+                description: "Design & Development",
+                imgUrl: projImg1,
+              }
             
           ];
   
@@ -36,21 +42,22 @@ export const Projects = () => {
                                 {({ isVisible}) => 
                                     <div className={isVisible ? "animate__animated animate__bounce" : ""}>
                     <h2>Projects</h2>
-                    <p>Lorem Ipsum is simply dummydn book.</p>
+                    <p>โปรเจคที่เคยทำมาก่อน</p>
                     </div>}
                     </TrackVisibility>
                     <Tab.Container id ="projects-tabs" defaultActiveKey="frist">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab" defaultActiveKey="/home">
                         <Nav.Item>
                             <Nav.Link eventKey="frist">Tab One</Nav.Link>
-                        </Nav.Item>
+                            <p>เครื่องวัด PM 1,2.5,10 พร้อมsofewareระบบปฏิบัติการandroid</p>
+                            </Nav.Item>
                         <Nav.Item>
                             <Nav.Link eventKey="second">Tab Two</Nav.Link>
-                        </Nav.Item>
+                            <p>                                                    </p>
+                            </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="third">
-                            Tab Three
-                            </Nav.Link>
+                            <Nav.Link eventKey="third">Tab Three</Nav.Link>
+                            <p>                                                     </p>
                         </Nav.Item>
                         </Nav>
                         <Tab.Content>
@@ -68,9 +75,9 @@ export const Projects = () => {
                                     }
                                 </Row>
                             </Tab.Pane>
-                              <Tab.Pane eventKey="second">Loren Ipsum</Tab.Pane>  
+                              <Tab.Pane eventKey="second">โปรเจคถัดไป</Tab.Pane>  
                               
-                              <Tab.Pane eventKey="third">Loren Ipsum</Tab.Pane>  
+                              <Tab.Pane eventKey="third">โปรเจคถัดไป</Tab.Pane>  
                         </Tab.Content>
                     </Tab.Container>
                     </Col>
