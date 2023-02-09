@@ -37,10 +37,10 @@ export const NavBar = () =>{
             </Navbar.Toggle>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('home')}>Home</Nav.Link>
-                <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}onClick={()=>onUpdateActiveLink('skills')}>Skills</Nav.Link>
-                <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}onClick={()=>onUpdateActiveLink('projects')}>Projects</Nav.Link>
-                <Nav.Link href="#contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'}onClick={()=>onUpdateActiveLink('contact')}>Contacts</Nav.Link>
+                <Nav.Link href="/" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('home')}>Home</Nav.Link>
+                <Nav.Link href="/#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}onClick={()=>onUpdateActiveLink('skills')}>Skills</Nav.Link>
+                <Nav.Link href="/#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}onClick={()=>onUpdateActiveLink('projects')}>Projects</Nav.Link>
+                <Nav.Link href="/#contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'}onClick={()=>onUpdateActiveLink('contact')}>Contacts</Nav.Link>
               </Nav>
               <span className="navbar-text">
                 <div className="social-icon">
@@ -52,7 +52,7 @@ export const NavBar = () =>{
                     <img src={navIcon3} alt="" />
                     </a>
                 </div>
-                <Link className="app-header-item" to="LoginForm"><button className="vvd" ><span>เข้าสู่ระบบ</span></button></Link>
+                <Nav.Link href="login" className="vvd" > <button className="vvd" ><span>เข้าสู่ระบบ</span></button></Nav.Link>
               </span>
             </Navbar.Collapse>
           </Container>
